@@ -1,6 +1,3 @@
-from enum import EnumMeta
-
-
 def get_mask_card_number(number_card: str) -> str:
     """Функция принимает на вход номер карты и возвращает ее маску, в формате XXXX XX** **** XXXX"""
     digits_card_number = []
