@@ -5,13 +5,7 @@ def test_mask_card_number():
     assert get_mask_card_number("2200213467788976") == "2200 21** **** 8976"
 
 
-@pytest.mark.parametrize("number, result", [
-    ("220012345678899", "Номер карты должен быть равен 16!"),
-    ("22001234567898765", "Номер карты должен быть равен 16!"),
-    ("123", "Номер карты должен быть равен 16!"),
-    ("48732632846324628746264872", "Номер карты должен быть равен 16!"),
-    ("", "Номер карты должен быть равен 16!")
-])
+@pytest.mark.parametrize("number, result", [length_list])
 def test_length_card_number(number, result):
     assert get_mask_card_number(number) == result
 
