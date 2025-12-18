@@ -30,11 +30,6 @@ def test_universality_mask_account_card(line, result):
 def test_error_mask_account_card():
     with pytest.raises(TypeError):
         mask_account_card()
-        mask_account_card("")
-        mask_account_card(None)
-        mask_account_card(38473874389)
-        mask_account_card("Счет")
-        mask_account_card("               ")
 
 
 # get_date
