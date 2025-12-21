@@ -19,7 +19,15 @@ def transaction_descriptions(list_dict: list, start=0) -> str:
 
 def card_number_generator(start: int, stop: int) -> str:
     ''' Генератор принимает начальное и конечное значения для генерации диапазона номеров. '''
-    for num in range(start, stop):
+    for num in range(start, stop + 1):
         number_card = f"{num:016d}"
         formatted = f"{number_card[:4]} {number_card[4:8]} {number_card[8:12]} {number_card[12:16]}"
         yield formatted
+
+
+gen = card_number_generator(1, 5)
+print(next(gen))
+print(next(gen))
+print(next(gen))
+print(next(gen))
+print(next(gen))

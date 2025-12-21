@@ -47,4 +47,30 @@ def test_filter_no_transactions(my_list):
 
 
 # transaction_descriptions
-def test_
+def test_transaction_descriptions(my_list):
+    generation = transaction_descriptions(my_list)
+    assert next(generation) == "Перевод организации"
+    assert next(generation) == "Перевод со счета на счет"
+    assert next(generation) == "Зарплата"
+
+
+def test_transaction_no_enmpty():
+    with pytest.raises(IndexError):
+        generation = transaction_descriptions([])
+        assert next(generation) == ""
+
+
+# card_number_generator
+def test_card_number_generator():
+    generation = card_number_generator(1, 5)
+    assert next(generation) == '0000 0000 0000 0001'
+    assert next(generation) == '0000 0000 0000 0002'
+    assert next(generation) == '0000 0000 0000 0003'
+    assert next(generation) == '0000 0000 0000 0004'
+    assert next(generation) == '0000 0000 0000 0005'
+
+
+def test_card_number_generator_2():
+    generation = card_number_generator(9999999999999998, 9999999999999999)
+    assert next(generation) == '9999 9999 9999 9998'
+    assert next(generation) == '9999 9999 9999 9999'
