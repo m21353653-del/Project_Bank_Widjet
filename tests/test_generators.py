@@ -1,0 +1,63 @@
+import pytest
+from src.generators import filter_by_currency, transaction_descriptions, card_number_generator
+
+
+@pytest.mark.parametrize(
+    "result",
+    [
+        (
+            {
+                "id": 939719570,
+                "state": "EXECUTED",
+                "date": "2018-06-30T02:08:58.425572",
+                "operationAmount": {"amount": "9824.07", "currency": {"name": "USD", "code": "USD"}},
+                "description": "Перевод организации",
+                "from": "Счет 75106830613657916952",
+                "to": "Счет 11776614605963066702",
+            }
+        ),
+    ],
+)
+def test_filter_by_currency(my_list, result):
+    generation = filter_by_currency(my_list, "USD")
+
+    assert next(generation) == result
+
+
+def test_filter_no_transactions(my_list):
+    with pytest.raises(StopIteration):
+        generation = filter_by_currency(my_list, "RUB")
+        assert next(generation)
+
+        generation = filter_by_currency([], "USD")
+        assert next(generation)
+
+
+# transaction_descriptions
+def test_transaction_descriptions(my_list):
+    generation = transaction_descriptions(my_list)
+    assert next(generation) == "Перевод организации"
+    assert next(generation) == "Перевод со счета на счет"
+    assert next(generation) == "Зарплата"
+
+
+def test_transaction_no_enmpty():
+    with pytest.raises(IndexError):
+        generation = transaction_descriptions([])
+        assert next(generation) == ""
+
+
+# card_number_generator
+def test_card_number_generator():
+    generation = card_number_generator(1, 5)
+    assert next(generation) == "0000 0000 0000 0001"
+    assert next(generation) == "0000 0000 0000 0002"
+    assert next(generation) == "0000 0000 0000 0003"
+    assert next(generation) == "0000 0000 0000 0004"
+    assert next(generation) == "0000 0000 0000 0005"
+
+
+def test_card_number_generator_2():
+    generation = card_number_generator(9999999999999998, 9999999999999999)
+    assert next(generation) == "9999 9999 9999 9998"
+    assert next(generation) == "9999 9999 9999 9999"
