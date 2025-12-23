@@ -8,6 +8,7 @@ from src.decorators import log
 def test_log_terminal(capsys):
     @log()
     def my_function(x, y):
+        ''' Функция возвращает деление x на y '''
         return x / y
 
     my_function(1, 2)
@@ -26,6 +27,7 @@ def test_log_terminal(capsys):
 def test_log_terminal_2(capsys, answer):
     @log()
     def my_function(text):
+        ''' Функция возвращает текст '''
         return text
 
     my_function("hello!")
@@ -40,6 +42,7 @@ def test_log(my_file):
 
     @log(filename="test_mylog.txt")
     def my_function(x, y):
+        ''' Функция возвращает деление x на y '''
         return x / y
 
     my_function(1, 2)
