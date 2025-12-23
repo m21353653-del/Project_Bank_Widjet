@@ -1,12 +1,12 @@
 from functools import wraps
-from typing import Callable
 from pathlib import Path
+from typing import Any, Callable
 
 
 def log(filename: str = "config.ini") -> Callable:
     def decorator(func: Callable) -> Callable:
         @wraps(func)
-        def wrapper(*args, **kwargs):
+        def wrapper(*args: Any, **kwargs: Any) -> Any:
             decorator_result = ""
             try:
                 result = func(*args, **kwargs)
@@ -20,7 +20,7 @@ def log(filename: str = "config.ini") -> Callable:
                 # Формируем путь: корень проекта → папка logs → файл
                 log_file = project_root / "logs" / filename
 
-                with open(log_file, "w", encoding='utf-8') as f:
+                with open(log_file, "w", encoding="utf-8") as f:
                     f.write(decorator_result)
 
                 return result
@@ -30,4 +30,5 @@ def log(filename: str = "config.ini") -> Callable:
             return result
 
         return wrapper
+
     return decorator
