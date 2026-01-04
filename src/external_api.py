@@ -33,7 +33,3 @@ def get_transaction_amount(transactions: list[dict]) -> float:
             continue
 
     return amount
-
-
-result = get_transaction_data("../data/operations.json")
-print(get_transaction_amount(result))
