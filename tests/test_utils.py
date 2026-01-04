@@ -1,6 +1,5 @@
-from codecs import replace_errors
-
 import pytest
+
 from src.utils import get_transaction_data
 
 
