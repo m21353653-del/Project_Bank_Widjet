@@ -37,3 +37,8 @@ def my_list():
             "to": "Счет 75651667383060284188",
         },
     ]
+
+
+@pytest.fixture
+def my_file():
+    return "test_mylog.txt"
