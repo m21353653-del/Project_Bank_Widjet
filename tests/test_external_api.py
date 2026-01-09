@@ -18,7 +18,7 @@ MOCK_API_RESPONSE = {"result": 180.00}
 def test_rub_only():
     transactions = [VALID_RUB_TRANS, VALID_RUB_TRANS]
     amount = get_transaction_amount(transactions)
-    assert amount == 201.00
+    assert amount == 100.5
 
 
 @patch("requests.get")

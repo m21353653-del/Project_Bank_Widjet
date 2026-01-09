@@ -24,6 +24,11 @@ def test_read_transactions_from_csv():
     ]
 
 
+def test_read_transactions_from_csv_file_not_found():
+    result = read_transactions_from_csv("no_such_file.csv")
+    assert result == []
+
+
 def test_read_transactions_from_excel():
     fake_df = pd.DataFrame(
         [
