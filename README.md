@@ -148,6 +148,7 @@ my_function: division by zero. Входные параметры: (5, 0)
 * test_processing.py - тестирование модуля `src/processing.py`
 * test_generators.py - тестирование модуля `src/generators.py`
 * test_decorators.py - тестирование модуля `src/decorators.py`
+* test_reading_different_formats.py - тестирование модуля `src/reading_different_formats.py`
 * conftest.py - файл с фикстурами
 
 Отчет по тестам в `htmlcov/index.html`
@@ -206,3 +207,11 @@ my_function: division by zero. Входные параметры: (5, 0)
     * Проверка, что логи верно сохраняются в файл
     * Проверка отработки исключений в терминале, отоброжение их в логах
     * Проверка отработки исключений в файле, отоброжение их в логах
+
+#### Модуль `reading_different_formats`
+1. Функция `read_transactions_from_csv`
+    * Проверка, что функция корректно обрабатывает файл csv и возвращает список словарей
+    * Проверка, что, если файл не найден, возвращается пустой словарь
+
+2. Функция `read_transactions_from_exel`
+    * Проверка, что функция корректно обрабатывает файл exel и возвращает список словарей
