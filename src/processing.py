@@ -23,9 +23,9 @@ def sort_by_date(my_list: list, is_reverse: bool = True) -> list:
     return list_date_sorted
 
 
-def process_bank_search(data:list[dict], search:str)->list[dict]:
-    ''' Принимает список словарей с данными о банковских операциях - data
-     и строку поиска - search, возвращает список словарей, у которых в описании есть search. '''
+def process_bank_search(data: list[dict], search: str) -> list[dict]:
+    """Принимает список словарей с данными о банковских операциях - data
+    и строку поиска - search, возвращает список словарей, у которых в описании есть search."""
     new_list = []
     pattern = re.compile(search)
 
@@ -41,8 +41,8 @@ def process_bank_search(data:list[dict], search:str)->list[dict]:
     return new_list
 
 
-def process_bank_operations(data:list[dict], categories:list)-> dict:
-    ''' Получаем список операций и список категорий, возвращаем словарь - 'категория:кол-во операций' '''
+def process_bank_operations(data: list[dict], categories: list) -> dict:
+    """Получаем список операций и список категорий, возвращаем словарь - 'категория:кол-во операций'"""
     list_descriptions = []
 
     try:
