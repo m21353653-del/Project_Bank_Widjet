@@ -147,20 +147,15 @@ def test_process_bank_search():
         },
     ]
 
-    # ищем транзакции, где есть слово "Оплата"
     result = process_bank_search(transactions, "Оплата")
 
-    # проверяем, что вернулись только нужные транзакции
     assert len(result) == 2
     assert all("Оплата" in t["description"] for t in result)
     assert result[0]["id"] == 1
     assert result[1]["id"] == 3
 
-    # ищем слово, которого нет
     empty_result = process_bank_search(transactions, "Кафе")
     assert empty_result == []
-
-    # проверяем, что функция не падает на некорректные данные
     bad_result = process_bank_search("не список", "Оплата")
     assert bad_result == []
 
