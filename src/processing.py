@@ -46,6 +46,7 @@ def process_bank_search(data: list[dict], search: str) -> list[dict]:
 def process_bank_operations(data: list[dict], categories: list) -> dict:
     """Получаем список операций и список категорий, возвращаем словарь - 'категория:кол-во операций'"""
     list_descriptions = []
+    dict_result = {}
 
     try:
         for my_dict in data:
