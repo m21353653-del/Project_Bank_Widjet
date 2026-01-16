@@ -9,6 +9,8 @@ def filter_by_state(my_list: list, state: str = "EXECUTED") -> list:
     new_list_formated = []
 
     for item in my_list:
+        if "state" not in item:
+            continue
         if item["state"] == state:
             new_list_formated.append(item)
 
