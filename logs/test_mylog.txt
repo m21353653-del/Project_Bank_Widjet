@@ -114,3 +114,75 @@ my_function: Запуск, параметры: (1, 2)
 my_function: результат - 0.5
 my_function: Запуск, параметры: (5, 0)
 my_function: division by zero. Входные параметры: (5, 0)
+my_function: Запуск, параметры: (1, 2)
+my_function: результат - 0.5
+my_function: Запуск, параметры: (5, 0)
+my_function: division by zero. Входные параметры: (5, 0)
+my_function: Запуск, параметры: (1, 2)
+my_function: результат - 0.5
+my_function: Запуск, параметры: (5, 0)
+my_function: division by zero. Входные параметры: (5, 0)
+my_function: Запуск, параметры: (1, 2)
+my_function: результат - 0.5
+my_function: Запуск, параметры: (5, 0)
+my_function: division by zero. Входные параметры: (5, 0)
+my_function: Запуск, параметры: (1, 2)
+my_function: результат - 0.5
+my_function: Запуск, параметры: (5, 0)
+my_function: division by zero. Входные параметры: (5, 0)
+my_function: Запуск, параметры: (1, 2)
+my_function: результат - 0.5
+my_function: Запуск, параметры: (5, 0)
+my_function: division by zero. Входные параметры: (5, 0)
+my_function: Запуск, параметры: (1, 2)
+my_function: результат - 0.5
+my_function: Запуск, параметры: (5, 0)
+my_function: division by zero. Входные параметры: (5, 0)
+my_function: Запуск, параметры: (1, 2)
+my_function: результат - 0.5
+my_function: Запуск, параметры: (5, 0)
+my_function: division by zero. Входные параметры: (5, 0)
+my_function: Запуск, параметры: (1, 2)
+my_function: результат - 0.5
+my_function: Запуск, параметры: (5, 0)
+my_function: division by zero. Входные параметры: (5, 0)
+my_function: Запуск, параметры: (1, 2)
+my_function: результат - 0.5
+my_function: Запуск, параметры: (5, 0)
+my_function: division by zero. Входные параметры: (5, 0)
+my_function: Запуск, параметры: (1, 2)
+my_function: результат - 0.5
+my_function: Запуск, параметры: (5, 0)
+my_function: division by zero. Входные параметры: (5, 0)
+my_function: Запуск, параметры: (1, 2)
+my_function: результат - 0.5
+my_function: Запуск, параметры: (5, 0)
+my_function: division by zero. Входные параметры: (5, 0)
+my_function: Запуск, параметры: (1, 2)
+my_function: результат - 0.5
+my_function: Запуск, параметры: (5, 0)
+my_function: division by zero. Входные параметры: (5, 0)
+my_function: Запуск, параметры: (1, 2)
+my_function: результат - 0.5
+my_function: Запуск, параметры: (5, 0)
+my_function: division by zero. Входные параметры: (5, 0)
+my_function: Запуск, параметры: (1, 2)
+my_function: результат - 0.5
+my_function: Запуск, параметры: (5, 0)
+my_function: division by zero. Входные параметры: (5, 0)
+my_function: Запуск, параметры: (1, 2)
+my_function: результат - 0.5
+my_function: Запуск, параметры: (5, 0)
+my_function: division by zero. Входные параметры: (5, 0)
+my_function: Запуск, параметры: (1, 2)
+my_function: результат - 0.5
+my_function: Запуск, параметры: (5, 0)
+my_function: division by zero. Входные параметры: (5, 0)
+my_function: Запуск, параметры: (1, 2)
+my_function: результат - 0.5
+my_function: Запуск, параметры: (5, 0)
+my_function: division by zero. Входные параметры: (5, 0)
+my_function: Запуск, параметры: (1, 2)
+my_function: результат - 0.5
+my_function: Запуск, параметры: (5, 0)
+my_function: division by zero. Входные параметры: (5, 0)

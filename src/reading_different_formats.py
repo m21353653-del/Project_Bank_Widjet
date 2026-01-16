@@ -2,6 +2,7 @@ import pandas as pd
 
 
 def clean_dict(d: dict) -> dict:
+    ''' Удалаяем из полученого словваря пустые значения и возвращаем новвый словарь '''
     new_d = {}
     for k, v in d.items():
         if isinstance(v, dict):
