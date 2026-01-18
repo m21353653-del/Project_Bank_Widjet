@@ -23,11 +23,3 @@ def card_number_generator(start: int, stop: int) -> str:
         number_card = f"{num:016d}"
         formatted = f"{number_card[:4]} {number_card[4:8]} {number_card[8:12]} {number_card[12:16]}"
         yield formatted
-
-
-gen = card_number_generator(1, 5)
-print(next(gen))
-print(next(gen))
-print(next(gen))
-print(next(gen))
-print(next(gen))
